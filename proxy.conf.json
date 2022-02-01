@@ -1,0 +1,11 @@
+{
+  "/CleanArch/cleanApp/*": {
+    "target": "http://localhost:1100",
+    "secure": false,
+    "pathRewrite": {
+      "^/CleanArch/cleanApp/": "/new-folder/"
+    },
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
