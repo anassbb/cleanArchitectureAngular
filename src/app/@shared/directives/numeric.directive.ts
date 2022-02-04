@@ -3,7 +3,7 @@ import { Directive, ElementRef, HostListener } from "@angular/core";
 @Directive({
   selector: "[appNumeric]",
 })
-export class NumericDirective {
+export class NumberDirective {
   constructor(private _el: ElementRef) {}
 
   @HostListener("input", ["$event"]) public onInputChange(event: any) {
