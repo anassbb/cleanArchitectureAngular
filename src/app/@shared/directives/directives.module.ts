@@ -20,4 +20,4 @@ export const SHARED_DIRECTIVES: Array<Type<any>> = [
   imports: [CommonModule, ReactiveFormsModule],
   exports: [...SHARED_DIRECTIVES],
 })
-export class DirectivesModule {}
+export class SharedDirectivesModule {}
