@@ -1,15 +1,14 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { DevicesComponent } from './devices/devices.component';
+import { DCComponentsModule } from "./../components/components.module";
+import { SharedModule } from "@shared/shared.module";
+import { NgModule, Type } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { DevicesComponent } from "./devices/devices.component";
 
-
+const dcComponent: Array<Type<any>> = [DevicesComponent];
 
 @NgModule({
-  declarations: [
-    DevicesComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [...dcComponent],
+  imports: [SharedModule, DCComponentsModule],
+  exports: [...dcComponent],
 })
-export class ContainersModule { }
+export class UsersContainersModule {}
