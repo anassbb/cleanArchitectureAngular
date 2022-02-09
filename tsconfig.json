@@ -4,7 +4,6 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
     "paths": {
       "@core": ["src/app/@core"],
       "@core/*": ["src/app/@core/*"],
@@ -12,11 +11,6 @@
       "@shared/*": ["src/app/@shared/*"],
       "@env/*": ["src/environments/*"]
     },
-    //"strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -30,9 +24,8 @@
     "resolveJsonModule": true
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
+    "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "preserveWhitespaces": true
   }
 }

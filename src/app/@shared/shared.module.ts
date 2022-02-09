@@ -24,6 +24,18 @@ import { SharedComponentsModule } from "./components/components.module";
   ],
   declarations: [],
   providers: [],
-  exports: [],
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
+    NgxJsonViewerModule,
+
+    SharedDirectivesModule,
+    SharedComponentsModule,
+    SharedPipesModule,
+
+    ValidationMessageModule,
+  ],
 })
 export class SharedModule {}
