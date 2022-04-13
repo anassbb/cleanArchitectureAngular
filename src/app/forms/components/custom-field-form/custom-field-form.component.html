@@ -1,1 +1,38 @@
-<p>custom-field-form works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Standalone</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <app-counter-input counterMinValue="0" counterMaxValue="3" [counterValue]="data.counter"></app-counter-input>
+  </mat-card-content>
+</mat-card>
+
+<hr />
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Inside Form</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <app-counter-input
+        formControlName="counter"
+        [counterRangeMax]="maxValue"
+        [counterRangeMin]="minValue"
+        [counterValue]="data.counter"
+      ></app-counter-input>
+    </form>
+    <p *ngIf="!form.valid">Form is invalid</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+  </mat-card-actions>
+
+  <hr />
+  <mat-card>
+    <mat-card-content>
+      <ngx-json-viewer [json]="form.value"></ngx-json-viewer>
+    </mat-card-content>
+  </mat-card>
+</mat-card>
